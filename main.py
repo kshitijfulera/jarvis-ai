@@ -4,6 +4,9 @@ from voice.tts.speak import speak
 
 from brain.intent_engine.parser import parse_command
 from core.command_router import handle_command
+from brain.memory.memory import add_to_memory, get_memory
+
+print("[MEMORY]", get_memory())
 
 def run_jarvis():
     while True:
@@ -16,6 +19,12 @@ def run_jarvis():
         if text:
             command = parse_command(text)
             response = handle_command(command)
+
+            print(response)
+            speak(response)
+
+            # Save memory
+            add_to_memory(text, response)
 
             print(response)
             speak(response)
