@@ -3,10 +3,10 @@ import sounddevice as sd
 import numpy as np
 
 # Load model once (important for performance)
-model = WhisperModel("small", compute_type="int8")  # use "tiny" if slow
+model = WhisperModel("tiny", compute_type="int8")  # use "tiny" if slow
 
 SAMPLE_RATE = 16000
-DURATION = 5  # seconds
+DURATION = 4 # seconds
 
 
 def record_audio(duration=DURATION, fs=SAMPLE_RATE):

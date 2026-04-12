@@ -1,0 +1,18 @@
+[
+    {
+        "user": "Thank you.",
+        "assistant": "You said: thank you., but AI is offline right now."
+    },
+    {
+        "user": "Open notepad.",
+        "assistant": "Opening notepad"
+    },
+    {
+        "user": "CROB",
+        "assistant": "You previously said 'Open notepad.'. Now you said 'crob'. I'm still learning."
+    },
+    {
+        "user": "Let us open Chrome.",
+        "assistant": "Opening chrome"
+    }
+]
