@@ -5,6 +5,15 @@ from threading import Thread
 from api.state import state
 from main import run_jarvis
 
+import psutil
+
+@app.get("/system")
+def get_system_data():
+    return {
+        "cpu": psutil.cpu_percent(interval=1),
+        "ram": psutil.virtual_memory().percent,
+    }
+
 # ✅ CREATE APP FIRST
 app = FastAPI()
 
